@@ -28,7 +28,7 @@ button {
     padding-bottom: 32px;
 }
 
-.section-job, .section-portfolio {
+.section-job, .section-portfolio, .section-clients {
     padding-top: 94px;
     padding-bottom: 94px;
 }
@@ -37,14 +37,8 @@ button {
     padding-top: 94px;
 }
 
-.footer {
-    background-color: #2F303A;
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
-
 /* Reset css */
-h1, h2, h3, p, ul {
+h1, h2, h3, h4, p, ul {
     margin: 0;
 }
 
@@ -87,6 +81,15 @@ a {
     color: #2196F3;
 }
 
+.contact-us-header:hover .contact-us-icon {
+    fill: #2196F3;
+}
+
+.contact-us-header {
+    display: flex;
+    align-items: center;
+}
+
 /* Заголовки блоков на странице Home */
 h2 {
     color: #212121;
@@ -99,7 +102,6 @@ h2 {
 }
 
 /* Кнопки */
-
 .main-button {
     border-radius: 4px;
     background-color: #2196F3;
@@ -138,7 +140,7 @@ h2 {
     border: none;
 }
 
-.portfolio-button:hover,
+.portfolio-button:hover, .portfolio-button:focus,
 .active-button {
     background-color: #2196F3;
     color: #FFFFFF;
@@ -173,10 +175,6 @@ h2 {
 .header-container {
     display: flex;
     align-items: center;
-}
-
-.header-group {
-    margin-left: auto;
 }
 
 .header {
@@ -224,12 +222,23 @@ h2 {
     letter-spacing: 0.02em;
 }
 
+.contact-us-icon {
+    margin-right: 10px;
+}
+
 /* Герой */
 .section-banner {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images-desktop/home/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 1600px;
+    margin-right: auto;
+    margin-left: auto;
     background-color: #2F303A;
     padding-top: 200px;
     padding-bottom: 200px;
     text-align: center;
+    /* width: 1600px; */
 }
 
 .banner-text {
@@ -246,7 +255,19 @@ h2 {
     width: 696px;
 }
 
-/* Особенности */
+/* Преимущества */
+.features-slide {
+    width: 270px;
+    height: 120px;
+    background-color: #F5F4FA;
+    margin-bottom: 30px;
+    border-radius: 4px;
+}
+
+.feature-icon {
+    margin: 25px 100px;
+}
+
 .peculiar-properties-list {
     display: flex;
 }
@@ -330,10 +351,64 @@ h2 {
     line-height: 1.18;
     letter-spacing: 0.03em;
     text-align: center;
+    margin-bottom: 16px;
 }
 
 .worker-name-profession {
     padding: 30px 30px;
+}
+
+/* Иконки соц сетей сотрудников */
+.icon-list {
+    display: flex;
+}
+
+.icon-enumeration:not(:last-child) {
+    margin-right: 10px;
+}
+
+.icon-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: #AFB1B8;
+}
+
+.icon-link:hover, .icon-link:focus {
+    background-color: #2196F3;
+    fill: #FFFFFF;
+}
+
+/* Постоянные клиенты */
+.regular-clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clients-list:not(:last-child) {
+    margin-right: 30px;
+}
+
+.clients-link {
+    display: flex;
+    fill: #AFB1B8;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+
+.clients-link:hover {
+    fill: #2196F3;
+    border: 1px solid #2196F3;
 }
 
 /* Портфолио */
@@ -359,7 +434,8 @@ h2 {
 
 .portfolio-list {
     padding: 20px 24px;
-    border-bottom: 1px solid #EEEEEE;
+    border: 1px solid #EEEEEE;
+    border-top: none;
 }
 
 .text-title {
@@ -380,6 +456,11 @@ h2 {
 }
 
 /* Подвал */
+.footer {
+    background-color: #2F303A;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
 
 address {
     font-style: normal;
@@ -401,7 +482,12 @@ address {
     letter-spacing: 0.03em;
 }
 
-.address-list {
+.logo-footer{
+    margin-bottom: 20px;
+    display: block;
+ }
+
+ .address-list {
     margin-bottom: 9px;
     display: block;
 }
@@ -410,8 +496,45 @@ address {
     margin-bottom: 0;
 }
 
-.footer .logo-footer{
+ .footer-invite {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
     margin-bottom: 20px;
-    margin-right: 0;
-    display: block;
+ }
+
+ .footer-icons {
+    display: flex;
+ }
+
+ .footer-list:not(:last-child) {
+    margin-right: 10px;
+ }
+
+ .footer-link {
+    fill: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+ }
+
+ .footer-link:hover {
+    background-color: #2196F3;
+    border-radius: 50%;
+ }
+
+ .footer-container {
+     display: flex;
+ }
+
+ .footer-right-side {
+     margin-left: 70px;
+     margin-top: 12px;
  }
