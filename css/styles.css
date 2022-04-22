@@ -535,9 +535,10 @@ address {
 
  .footer-container {
      display: flex;
+     align-items: center
  }
 
  .footer-right-side {
      margin-left: 70px;
-     margin-top: 12px;
+     /* margin-top: 12px; */
  }
